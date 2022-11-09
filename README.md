@@ -34,7 +34,7 @@ Soil_Type (40 binary columns) / qualitative / 0 (absence) or 1 (presence) / Soil
 Cover_Type (7 types) / integer / 1 to 7 / Forest Cover Type designation.
 
  
-Step 1)  Data Validation 
+Step 1) Data Validation 
 In this step, we perform different sets of validation on the given set of training files.  
 1.	 Name Validation- We validate the name of the files based on the given name in the schema file. We have created a regex pattern as per the name given in the schema file to use for validation. After validating the pattern in the name, we check for the length of date in the file name as well as the length of time in the file name. If all the values are as per requirement, we move such files to "Good_Data_Folder" else we move such files to "Bad_Data_Folder."
 
@@ -49,13 +49,13 @@ In this step, we perform different sets of validation on the given set of traini
 5.	Null values in columns - If any of the columns in a file have all the values as NULL or missing, we discard such a file and move it to "Bad_Data_Folder".
 
 
-Step 2)  Data Insertion in Database
+Step 2) Data Insertion in Database
  
 1) Database Creation and connection - Create a database with the given name passed. If the database is already created, open the connection to the database. 
 2) Table creation in the database - Table with name - "Good_Data", is created in the database for inserting the files in the "Good_Data_Folder" based on given column names and datatype in the schema file. If the table is already present, then the new table is not created and new files are inserted in the already present table as we want training to be done on new as well as old training files.     
 3) Insertion of files in the table - All the files in the "Good_Data_Folder" are inserted in the above-created table. If any file has invalid data type in any of the columns, the file is not loaded in the table and is moved to "Bad_Data_Folder".
  
-Step 3)  Model Training 
+Step 3) Model Training 
 1) Data Export from Db - The data in a stored database is exported as a CSV file to be used for model training.
 2) Data Preprocessing   
    a) Check for null values in the columns. If present, impute the null values using the KNN imputer.
@@ -67,8 +67,7 @@ c) scale the numerical values in the given dataset after we split them for test 
  
  
  
-Step 4)   
-Prediction Data Description
+Step 4) Prediction Data Description
  
 Client will send the data in multiple set of files in batches at a given location. Data will contain Wafer names and 590 columns of different sensor values for each wafer. 
 Apart from prediction files, we also require a "schema" file from client which contains all the relevant information about the training files such as:
@@ -86,7 +85,7 @@ Data Insertion in Database
 3) Insertion of files in the table - All the files in the "Good_Data_Folder" are inserted in the above-created table. If any file has invalid data type in any of the columns, the file is not loaded in the table and is moved to "Bad_Data_Folder".
 
 
-Step 5)  Prediction 
+Step 5) Prediction 
  
 1) Data Export from Db - The data in a stored database is exported as a CSV file to be used for model training.
 2) Data Preprocessing   
@@ -96,7 +95,7 @@ c) scale the numerical values in the given dataset after we split them for test 
 4) Prediction - Based on the cluster number, the respective model is loaded and is used to predict the data for that cluster.
 5) Once the prediction is made for all the clusters, the predictions are saved in a CSV file with the names of forest cover was was given in the training set before encoding  at a given location and the location is returned to the client.
  
-Step 6)  Deployment
+Step 6) Deployment
 
 We will be deploying the model to the Pivotal Cloud Foundry platform. 
 This is a workflow diagram for the prediction of using the trained model.                  
