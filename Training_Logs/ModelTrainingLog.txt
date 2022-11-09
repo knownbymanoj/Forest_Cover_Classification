@@ -1,0 +1,30 @@
+2022-11-06/10:54:01		Start of Training
+2022-11-06/10:54:01		Entered the get_data method of the Data_Getter class
+2022-11-06/10:54:01		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-11-06/10:54:25		Entered the elbow_plot method of the KMeansClustering class
+2022-11-06/10:55:28		The optimum number of clusters is: 3 . Exited the elbow_plot method of the KMeansClustering class
+2022-11-06/10:55:28		Entered the create_clusters method of the KMeansClustering class
+2022-11-06/10:55:32		Entered the save_model method of the File_Operation class
+2022-11-06/10:55:32		Model File KMeans saved. Exited the save_model method of the Model_Finder class
+2022-11-06/10:55:32		succesfully created 3clusters. Exited the create_clusters method of the KMeansClustering class
+2022-11-06/10:55:32		Entered the get_best_model method of the Model_Finder class
+2022-11-06/10:55:32		Entered the get_best_params_for_xgboost method of the Model_Finder class
+2022-11-06/13:30:49		XGBoost best params: {'learning_rate': 0.5, 'max_depth': 10, 'n_estimators': 200}. Exited the get_best_params_for_xgboost method of the Model_Finder class
+2022-11-06/13:30:55		Exception occured in get_best_model method of the Model_Finder class. Exception message:  'Model_Finder' object has no attribute 'xgboost_score'
+2022-11-06/13:30:55		Model Selection Failed. Exited the get_best_model method of the Model_Finder class
+2022-11-06/13:30:55		Unsuccessful End of Training
+2022-11-08/10:14:16		Start of Training
+2022-11-08/10:14:16		Entered the get_data method of the Data_Getter class
+2022-11-08/10:14:17		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-11-08/10:17:31		Entered the elbow_plot method of the KMeansClustering class
+2022-11-08/10:20:20		The optimum number of clusters is: 3 . Exited the elbow_plot method of the KMeansClustering class
+2022-11-08/10:20:20		Entered the create_clusters method of the KMeansClustering class
+2022-11-08/10:20:29		Entered the save_model method of the File_Operation class
+2022-11-08/10:20:29		Model File KMeans saved. Exited the save_model method of the Model_Finder class
+2022-11-08/10:20:29		succesfully created 3clusters. Exited the create_clusters method of the KMeansClustering class
+2022-11-08/10:20:30		Entered the get_best_model method of the Model_Finder class
+2022-11-08/10:20:30		Entered the get_best_params_for_xgboost method of the Model_Finder class
+2022-11-08/18:09:28		XGBoost best params: {'learning_rate': 0.5, 'max_depth': 10, 'n_estimators': 200}. Exited the get_best_params_for_xgboost method of the Model_Finder class
+2022-11-08/18:09:47		Exception occured in get_best_model method of the Model_Finder class. Exception message:  'XGBClassifier' object has no attribute 'predit_proba'
+2022-11-08/18:09:47		Model Selection Failed. Exited the get_best_model method of the Model_Finder class
+2022-11-08/18:09:47		Unsuccessful End of Training
