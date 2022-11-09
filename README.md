@@ -1,10 +1,8 @@
 # Forest_Cover_Classification
-Build a classification methodology to predict the type of forest cover based on the given training data
-
 
 Problem Statement
 To build a classification methodology to predict the type of forest cover based on the given training data. 
-Architecture
+
   
 Data Description
 The client will send data in multiple sets of files in batches at a given location. Data will contain different indicators to classify them betwee given types of forest cover.
